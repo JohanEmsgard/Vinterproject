@@ -32,10 +32,18 @@ public class Eren
             rect.y -= speed;
         }
 
-          if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             rect.y += speed;
         }
+
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
+        {
+            sprite = Raylib.LoadTexture("AttackTitan.png");
+            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+        }
+
+
 
     }
 
