@@ -129,11 +129,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\emsgard.johan\\Programering 2\\Vinterproject\\Vinterproject\\Vinterproject.csproj",
+      "projectUniqueName": "C:\\Users\\emsgard.johan\\Programering 2\\Vinterproject\\Vinterproject\\Vinterproject.csproj",
       "projectName": "Vinterproject",
-      "projectPath": "c:\\Users\\emsgard.johan\\Programering 2\\Vinterproject\\Vinterproject\\Vinterproject.csproj",
+      "projectPath": "C:\\Users\\emsgard.johan\\Programering 2\\Vinterproject\\Vinterproject\\Vinterproject.csproj",
       "packagesPath": "C:\\Users\\emsgard.johan\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\emsgard.johan\\Programering 2\\Vinterproject\\Vinterproject\\obj\\",
+      "outputPath": "C:\\Users\\emsgard.johan\\Programering 2\\Vinterproject\\Vinterproject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -147,6 +147,7 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
