@@ -16,6 +16,7 @@ while(!Raylib.WindowShouldClose())
     //Garfik
     Raylib.BeginDrawing();
     Raylib.ClearBackground(Color.WHITE);
+    Raylib.LoadTexture("Backgound.png");
     eren.Draw();
 
 

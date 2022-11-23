@@ -1,7 +1,8 @@
 using System;
 
 
-public class AttackTitan
+public class AttackTitan : Eren
 {
+    public int TitanTime { get; set; }
     
 }

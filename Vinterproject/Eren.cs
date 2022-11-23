@@ -4,7 +4,11 @@ public class Eren
 {
     //Postion 
     private Rectangle rect;
-    private Texture2D sprite;
+    protected Texture2D sprite;
+
+    // bool är en titan?
+
+
 
     public float speed = 5f;
 
@@ -19,9 +23,14 @@ public class Eren
     {
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
+            // om jag inte är en titan
             sprite = Raylib.LoadTexture("ErenRight.png");
             rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+            
             rect.x += speed;
+
+            // om jag är en titan
+            // rect x += speed/2
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -43,13 +52,12 @@ public class Eren
             rect.y += speed;
         }
 
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
         {
+            // jag är en titan 
             sprite = Raylib.LoadTexture("AttackTitan.png");
             rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
         }
-
-
 
     }
 
