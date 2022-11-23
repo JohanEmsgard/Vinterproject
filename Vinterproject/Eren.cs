@@ -76,8 +76,12 @@ public class Eren
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
         {
             // jag är en titan 
-            sprite = Raylib.LoadTexture("AttackTitan.png");
-            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+            if ( x == true)
+            {
+                sprite = Raylib.LoadTexture("AttackTitan.png");
+                rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+
+            }
         }
 
     }
