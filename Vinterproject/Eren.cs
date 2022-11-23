@@ -19,16 +19,22 @@ public class Eren
     {
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
+            sprite = Raylib.LoadTexture("ErenRight.png");
+            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
             rect.x += speed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
+            sprite = Raylib.LoadTexture("ErenLeft.png");
+            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
             rect.x -= speed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
         {
+            sprite = Raylib.LoadTexture("ErenJump.png");
+            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
             rect.y -= speed;
         }
 
