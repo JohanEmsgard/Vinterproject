@@ -7,8 +7,7 @@ public class Eren
     protected Texture2D sprite;
 
     // bool är en titan?
-
-
+    bool x = true;
 
     public float speed = 5f;
 
@@ -24,27 +23,49 @@ public class Eren
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             // om jag inte är en titan
-            sprite = Raylib.LoadTexture("ErenRight.png");
-            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
-            
-            rect.x += speed;
-
+            if (x == false)
+            {
+                sprite = Raylib.LoadTexture("ErenRight.png");
+                rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+            }
+                rect.x += speed;
             // om jag är en titan
-            // rect x += speed/2
+            if ( x == true)
+            {
+                rect.x += speed/2;
+            }
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
-            sprite = Raylib.LoadTexture("ErenLeft.png");
-            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+            if ( x == false)
+            {
+                sprite = Raylib.LoadTexture("ErenLeft.png");
+                rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+
+            }
             rect.x -= speed;
+
+            if ( x == true)
+            {
+                rect.x -=speed/2;
+            }
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
         {
-            sprite = Raylib.LoadTexture("ErenJump.png");
-            rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+            if ( x == false)
+            {
+                sprite = Raylib.LoadTexture("ErenJump.png");
+                rect = new Rectangle((int) rect.x, (int)rect.y, sprite.width, sprite.height);
+
+            }
             rect.y -= speed;
+
+            if (x == true)
+            {
+                rect.y -= speed/2;
+            }
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
