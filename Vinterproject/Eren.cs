@@ -8,7 +8,6 @@ public class Eren
 
     // bool är en titan?
     bool x = true;
-    bool y = true;
 
     public float speed = 5f;
 
@@ -33,6 +32,7 @@ public class Eren
             // om jag är en titan
             if ( x == true)
             {
+                //sprite = Raylib.LoadTexture("AttackTitan.png");
                 rect.x += speed/2;
             }
         }
