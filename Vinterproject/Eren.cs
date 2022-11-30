@@ -23,7 +23,7 @@ using System;
 */
 
 
-public class Eren
+public class Eren : Form
 {
     //Postion 
     private Rectangle rect;
