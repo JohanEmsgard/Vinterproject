@@ -7,7 +7,7 @@ public class Character
     private Rectangle rect;
     protected Texture2D sprite;
 
-    public int timer { get; set; }
+    public int timer { get; set; } = 0;
     public float speed = 5f;
 
     public Vector2 position = new Vector2();
@@ -37,28 +37,51 @@ public class Character
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             position.X += speed;
+            if(currentForm == erenForm)
+            {
+                timer += 5;
+            }
+
+            else if (currentForm == titanForm)
+            {
+                timer -= 5;
+            }
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
+            timer -= 1;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
         {
             position.Y -= speed;
+            timer -= 1;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             position.Y += speed;
+            timer -= 1;
         }
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
         {
             isTitan = true;
             currentForm = titanForm;
+        if (timer >= 0)
+        {
+            currentForm = erenForm;
         }
+
+        else if (timer <= 5)
+        {
+            currentForm = titanForm;
+        }
+        }
+
+        
 
         currentForm.Update(position);
     }

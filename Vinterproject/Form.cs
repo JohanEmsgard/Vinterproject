@@ -1,6 +1,7 @@
 using System;
 using System.Numerics;
 
+
 public class Form
 {
     private Rectangle rect;
@@ -9,13 +10,14 @@ public class Form
     public Form()
     {
         sprite = Raylib.LoadTexture("Eren.png");
-
     }
+
 
     public void Update(Vector2 pos)
     {
         rect.x = pos.X - rect.width/2;
         rect.y = pos.Y - rect.width/2;
+
 
     }
 
