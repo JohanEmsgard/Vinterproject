@@ -37,12 +37,10 @@ public class Character
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             position.X += speed;
-            if(currentForm == erenForm)
-            {
-                timer += 5;
-            }
+            timer += 5;
+            
 
-            else if (currentForm == titanForm)
+            if (currentForm == titanForm)
             {
                 timer -= 5;
             }
