@@ -70,7 +70,7 @@ public class Character
         {
             isTitan = true;
             currentForm = titanForm;
-        if (timer >= 0)
+        if (timer == 0)
         {
             currentForm = erenForm;
         }
