@@ -4,19 +4,19 @@
 Raylib.InitWindow(1000,800, "Scene");
 Raylib.SetTargetFPS(60);
 
-Eren eren = new Eren();
+Character character = new Character();
 
 
 while(!Raylib.WindowShouldClose())
 {
     //Logik
-    eren.Update();
+    character.Update();
 
 
     //Garfik
     Raylib.BeginDrawing();
     Raylib.ClearBackground(Color.WHITE);
-    eren.Draw();
+    character.Draw();
 
 
 
