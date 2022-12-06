@@ -4,7 +4,7 @@ using System.Numerics;
 public class Character
 {
     //Postion
-    private Rectangle rect;
+    //private Rectangle rect;
     protected Texture2D sprite;
 
     public int timer { get; set; } = 0;
@@ -38,12 +38,12 @@ public class Character
         {
             position.X += speed;
             timer += 5;
+        }
+
         if (currentForm == titanForm)
         {
             timer -= 1;
         }
-        }
-        
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
