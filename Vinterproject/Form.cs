@@ -17,8 +17,6 @@ public class Form
     {
         rect.x = pos.X - rect.width/2;
         rect.y = pos.Y - rect.width/2;
-
-
     }
 
     public void Draw()
