@@ -3,7 +3,7 @@ using System.Numerics;
 
 public class Character
 {
-     //Postion
+    //Postion
     private Rectangle rect;
     protected Texture2D sprite;
 
@@ -16,7 +16,7 @@ public class Character
     {
         currentForm = erenForm;
     }
-    
+
     // bool är en titan?
     bool isTitan = false;
 
@@ -33,53 +33,52 @@ public class Character
     public void Update()
     {
 
-        
+
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             position.X += speed;
             timer += 5;
-            
-
-            if (currentForm == titanForm)
-            {
-                timer -= 5;
-            }
+        }
+        
+        if (currentForm == titanForm)
+        {
+            timer -= 1;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
-            timer -= 1;
+
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
         {
             position.Y -= speed;
-            timer -= 1;
+
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             position.Y += speed;
-            timer -= 1;
+
         }
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
         {
             isTitan = true;
             currentForm = titanForm;
-        if (timer == 0)
-        {
-            currentForm = erenForm;
+            if (timer >= 0)
+            {
+                currentForm = erenForm;
+            }
+
+            else if (timer != 0)
+            {
+                currentForm = titanForm;
+            }
         }
 
-        else if (timer <= 5)
-        {
-            currentForm = titanForm;
-        }
-        }
 
-        
 
         currentForm.Update(position);
     }
