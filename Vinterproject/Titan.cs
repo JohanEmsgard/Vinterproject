@@ -7,9 +7,5 @@ public class Titan : Form
     {
         sprite = Raylib.LoadTexture("AttackTitan.png");
     }
-    public void Update()
-    {
-
-    }
     
 }

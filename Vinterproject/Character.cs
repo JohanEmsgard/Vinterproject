@@ -38,6 +38,7 @@ public class Character
         {
             position.X += speed;
             timer += 5;
+            //sprite = Raylib.LoadTexture("ErenRight.png");
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -75,12 +76,15 @@ public class Character
                 currentForm = titanForm;
             }
 
+        }
+
+        
+
         if (currentForm == titanForm)
         {
             timer -= 5;
         }
 
-        }
 
 
 
