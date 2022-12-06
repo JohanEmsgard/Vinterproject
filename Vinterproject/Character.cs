@@ -38,36 +38,38 @@ public class Character
         {
             position.X += speed;
             timer += 5;
-        }
-        
         if (currentForm == titanForm)
         {
             timer -= 1;
         }
+        }
+        
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
+            timer += 5;
 
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
         {
             position.Y -= speed;
+            timer += 5;
 
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             position.Y += speed;
-
+            timer += 5;
         }
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
         {
             isTitan = true;
             currentForm = titanForm;
-            if (timer >= 0)
+            if (timer == 0)
             {
                 currentForm = erenForm;
             }
