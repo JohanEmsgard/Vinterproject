@@ -32,6 +32,7 @@ public class Character
     //Metod Movement
     public void Update()
     {
+        //Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
 
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
@@ -62,12 +63,18 @@ public class Character
 
         if (currentForm == titanForm)
         {
-               timer -= 5;
+            timer -= 5;
         }
 
+        //Medan jag är en Titan
         if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
         {
             timer -= 100;
+        }
+
+        if (timer >= 5)
+        {
+            Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
         }
 
         //Titan Knapp

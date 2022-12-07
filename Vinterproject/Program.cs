@@ -6,6 +6,8 @@ Raylib.SetTargetFPS(60);
 
 Character character = new Character();
 
+Raylib.LoadTexture("Background.png");
+
 
 while(!Raylib.WindowShouldClose())
 {
@@ -15,7 +17,7 @@ while(!Raylib.WindowShouldClose())
 
     //Garfik
     Raylib.BeginDrawing();
-    Raylib.ClearBackground(Color.WHITE);
+    Raylib.ClearBackground(Color.BLUE);
     character.Draw();
 
 
