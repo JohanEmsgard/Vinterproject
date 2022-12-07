@@ -60,6 +60,14 @@ public class Character
             timer += 5;
         }
 
+        if (currentForm == titanForm)
+        {
+            if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
+            {
+               timer -= 100;
+            }
+        }
+
         if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
         {
             timer -= 100;
