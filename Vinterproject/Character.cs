@@ -38,7 +38,6 @@ public class Character
         {
             position.X += speed;
             timer += 5;
-            //sprite = Raylib.LoadTexture("ErenRight.png");
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -61,29 +60,29 @@ public class Character
             timer += 5;
         }
 
+        if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
+        {
+            timer -= 100;
+        }
+
         //Titan Knapp
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
         {
             isTitan = true;
             currentForm = titanForm;
-            if (timer == 0)
+        }
+        if (timer <=0 && isTitan)
             {
                 currentForm = erenForm;
             }
 
-            else if (timer != 0)
+            else if (timer >= 0 && isTitan)
             {
                 currentForm = titanForm;
             }
 
-        }
 
-        
-
-        if (currentForm == titanForm)
-        {
-            timer -= 5;
-        }
+        Console.WriteLine(timer);
 
 
 

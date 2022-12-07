@@ -1,7 +1,7 @@
 ﻿global using Raylib_cs;
 
 //Skärm
-Raylib.InitWindow(1000,800, "Scene");
+Raylib.InitWindow(1200,1000, "Scene");
 Raylib.SetTargetFPS(60);
 
 Character character = new Character();

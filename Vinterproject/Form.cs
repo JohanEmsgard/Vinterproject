@@ -9,7 +9,7 @@ public class Form
 
     public Form()
     {
-        sprite = Raylib.LoadTexture("Eren.png");
+        //sprite = Raylib.LoadTexture("Eren.png");
     }
 
 
