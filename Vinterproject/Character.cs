@@ -94,7 +94,7 @@ public class Character
             }
 
 
-        //Console.WriteLine(timer);
+        Console.WriteLine(timer);
 
 
 
