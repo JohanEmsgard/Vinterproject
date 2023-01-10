@@ -66,11 +66,7 @@ public class Character
             timer -= 5;
         }
 
-        //Medan jag är en Titan
-        if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
-        {
-            timer -= 100;
-        }
+
 
         if (timer >= 5)
         {
