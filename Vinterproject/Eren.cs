@@ -28,6 +28,9 @@ public class Eren : Form
     public Eren()
     {
         sprite = Raylib.LoadTexture("Eren.png");
+
     }
+
+
     
 }

@@ -7,15 +7,15 @@ public class Form
     private Rectangle rect;
     protected Texture2D sprite;
 
+
     public Form()
     {
-        //sprite = Raylib.LoadTexture("Eren.png");
+        sprite = Raylib.LoadTexture("Eren.png");
     }
-
 
     public void Update(Vector2 pos)
     {
-        rect.x = pos.X - rect.width/2;
+        rect.x = pos.X - rect.width/2; 
         rect.y = pos.Y - rect.width/2;
     }
 
