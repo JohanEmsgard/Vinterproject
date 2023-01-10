@@ -86,6 +86,7 @@ public class Character
         if (timer <=0 && isTitan)
             {
                 currentForm = erenForm;
+                isTitan = false;
             }
 
             else if (timer >= 0 && isTitan)
