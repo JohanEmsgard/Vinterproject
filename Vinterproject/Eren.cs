@@ -28,8 +28,12 @@ public class Eren : Form
     public Eren()
     {
         sprite = Raylib.LoadTexture("Eren.png");
+      if(Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
+      {
+        sprite = Raylib.LoadTexture("ErenLeft.png");
+      }
     }
 
-
+  
     
 }
