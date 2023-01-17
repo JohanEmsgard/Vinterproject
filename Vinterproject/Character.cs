@@ -34,6 +34,11 @@ public class Character
     {
         //Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
 
+        if (timer >= 5)
+        {
+            Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
+        }
+
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
@@ -67,11 +72,6 @@ public class Character
         }
 
 
-
-        if (timer >= 5)
-        {
-            Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
-        }
 
         //Titan Knapp
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
