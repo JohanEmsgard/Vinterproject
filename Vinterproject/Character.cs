@@ -34,7 +34,7 @@ public class Character
     {
         //Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
 
-        if (timer >= 5)
+        if (timer >= 100)
         {
             Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
         }
@@ -74,7 +74,7 @@ public class Character
 
 
         //Titan Knapp
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_E) && timer >= 10)
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_E) && timer >= 100)
         {
             isTitan = true;
             currentForm = titanForm;
