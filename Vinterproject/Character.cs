@@ -74,20 +74,16 @@ public class Character
 
 
         //Titan Knapp
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_E))
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_E) && timer >= 10)
         {
             isTitan = true;
             currentForm = titanForm;
         }
+
         if (timer <=0 && isTitan)
             {
                 currentForm = erenForm;
                 isTitan = false;
-            }
-
-            else if (timer >= 0 && isTitan)
-            {
-                currentForm = titanForm;
             }
 
 
