@@ -43,27 +43,27 @@ public class Character
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             position.X += speed;
-            timer += 5;
+            timer += 1;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
-            timer += 5;
+            timer += 1;
 
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
         {
             position.Y -= speed;
-            timer += 5;
+            timer += 1;
 
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             position.Y += speed;
-            timer += 5;
+            timer += 1;
         }
 
         if (currentForm == titanForm)
