@@ -90,7 +90,7 @@ public class Character
 
         if (currentForm == titanForm)
         {
-            Raylib.DrawText("Press E to to Transform",100,100,30,Color.BLACK);
+            Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
         }
 
 
