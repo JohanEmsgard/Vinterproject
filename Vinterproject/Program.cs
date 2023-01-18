@@ -11,8 +11,6 @@ Texture2D background = Raylib.LoadTexture("Background.png");
 
 while(!Raylib.WindowShouldClose())
 {
-    //Logik
-    character.Update();
 
 
     //Garfik
@@ -20,6 +18,8 @@ while(!Raylib.WindowShouldClose())
     Raylib.ClearBackground(Color.BLUE);
     Raylib.DrawTexture(background, 0,0 , Color.WHITE);
     character.Draw();
+    //Logik
+    character.Update();
 
 
 

@@ -34,10 +34,7 @@ public class Character
     {
         //Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
 
-        if (timer >= 100)
-        {
-            Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
-        }
+
 
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
@@ -85,6 +82,11 @@ public class Character
                 currentForm = erenForm;
                 isTitan = false;
             }
+
+        if (timer >= 100)
+        {
+            Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
+        }
 
 
         Console.WriteLine(timer);
