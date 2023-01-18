@@ -88,6 +88,11 @@ public class Character
             Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
         }
 
+        if (currentForm == titanForm)
+        {
+            Raylib.DrawText("Press E to to Transform",100,100,30,Color.BLACK);
+        }
+
 
         Console.WriteLine(timer);
 
