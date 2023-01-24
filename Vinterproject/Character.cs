@@ -7,7 +7,20 @@ public class Character
     protected Texture2D sprite;
 
     public int timer { get; set; } = 0;
+
     public float speed = 5f;
+
+
+    //Tom Lista
+    List<string> list= new List<string>();
+    //Lista ed innehåll på ord
+
+ 
+
+
+
+
+
 
     public Vector2 position = new Vector2();
 
@@ -28,9 +41,13 @@ public class Character
         currentForm.Draw();
     }
 
+
+
     //Metod Movement
     public void Update()
     {
+
+
         //Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
 
 
@@ -40,13 +57,13 @@ public class Character
         {
             position.X += speed;
             timer += 1;
+            
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
             timer += 1;
-
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
@@ -67,6 +84,7 @@ public class Character
             timer -= 5;
         }
 
+            Scream();
 
 
         //Titan Knapp

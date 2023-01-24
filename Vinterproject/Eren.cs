@@ -30,7 +30,17 @@ public class Eren : Form
         sprite = Raylib.LoadTexture("Eren.png");
 
     }
+    
+    public int voiceLine;
+      //Metod
+         public void Scream()
+    {
+        Random rnd = new();
+        List<string> choices = new List<string>() {"AAAAAA","DIE","ATTACK"};
+        voiceLine = rnd.Next(choices.Count);
+    }
 
+    
   
     
 }
