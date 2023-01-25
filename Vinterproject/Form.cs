@@ -6,14 +6,10 @@ public class Form
     private Rectangle rect;
     protected Texture2D sprite;
 
-    private string dialogueText;
-
-
     public Form()
     {
         sprite = Raylib.LoadTexture("Eren.png");
     }
-
     public void Update(Vector2 pos)
     {
         rect.x = pos.X - rect.width/2; 

@@ -18,23 +18,11 @@ public class Character
     //Metod
     public void Scream()
     {
-        
         Random rnd = new();
+        //Lista ed innehåll på ord
         List<string> choices = new List<string>() {"AAAAAA","DIE","ATTACK"};
         voiceLine = rnd.Next(choices.Count);
-        talk(choices[voiceLine]);
     }
-    
-
-
-
-
-    //Lista ed innehåll på ord
-
- 
-
-
-
 
 
 
@@ -99,9 +87,9 @@ public class Character
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE))
         {
-            Raylib.DrawText(voiceLine,100,100,100,Color.BLACK);
+            Raylib.DrawText(<list>(voiceLine),100,100,100,Color.BLACK);
+            Scream();
         }
-        Scream();
 
         if (currentForm == titanForm)
         {
