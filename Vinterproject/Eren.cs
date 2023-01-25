@@ -31,16 +31,6 @@ public class Eren : Form
 
     }
     
-    public int voiceLine;
-      //Metod
-         public void Scream()
-    {
-        Random rnd = new();
-        List<string> choices = new List<string>() {"AAAAAA","DIE","ATTACK"};
-        voiceLine = rnd.Next(choices.Count);
-    }
-
-    
   
     
 }

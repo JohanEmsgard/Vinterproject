@@ -10,9 +10,25 @@ public class Character
 
     public float speed = 5f;
 
+    public int voiceLine;
 
     //Tom Lista
     List<string> list= new List<string>();
+    
+    //Metod
+    public void Scream()
+    {
+        
+        Random rnd = new();
+        List<string> choices = new List<string>() {"AAAAAA","DIE","ATTACK"};
+        voiceLine = rnd.Next(choices.Count);
+        talk(choices[voiceLine]);
+    }
+    
+
+
+
+
     //Lista ed innehåll på ord
 
  
@@ -35,6 +51,8 @@ public class Character
     Form currentForm;
     Form erenForm = new Eren();
     Form titanForm = new Titan();
+
+
 
     public void Draw()
     {
@@ -79,12 +97,17 @@ public class Character
             timer += 1;
         }
 
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE))
+        {
+            Raylib.DrawText(voiceLine,100,100,100,Color.BLACK);
+        }
+        Scream();
+
         if (currentForm == titanForm)
         {
             timer -= 5;
         }
 
-            Scream();
 
 
         //Titan Knapp
@@ -109,6 +132,7 @@ public class Character
         {
             Raylib.DrawText("Press E to Transform",100,100,30,Color.BLACK);
         }
+
 
 
         Console.WriteLine(timer);
