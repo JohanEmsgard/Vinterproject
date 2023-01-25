@@ -1,4 +1,3 @@
-
 using System.Numerics;
 
 
@@ -6,6 +5,8 @@ public class Form
 {
     private Rectangle rect;
     protected Texture2D sprite;
+
+    private string dialogueText;
 
 
     public Form()
@@ -19,9 +20,11 @@ public class Form
         rect.y = pos.Y - rect.width/2;
     }
 
+
     public void Draw()
     {
         Raylib.DrawTexture(sprite, (int)rect.x, (int)rect.y, Color.WHITE);
     }
+
 
 }
