@@ -87,7 +87,7 @@ public class Character
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE))
         {
-            Raylib.DrawText(<list>(voiceLine),100,100,100,Color.BLACK);
+            //Raylib.DrawText(voiceLine[choice.Count],100,100,100,Color.BLACK);
             Scream();
         }
 
